@@ -19,7 +19,10 @@ const startConversation = useCallback(async () => {
       // Start the conversation with your agent
       
       await conversation.startSession({
-        agentId:"agent_01jwwwyqpfep0s6expbhv2gpj0", // Replace with your agent ID
+        dynamicVariables:{
+          name:'userswitch'
+        },
+        agentId:"agent_01jwzh3shze6zs793p21vcsb4q", // Replace with your agent ID
       });
     } catch (error) {
       console.error('Failed to start conversation:', error);
